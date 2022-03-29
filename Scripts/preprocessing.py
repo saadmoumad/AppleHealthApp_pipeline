@@ -1,10 +1,10 @@
 import os
-import datetime as dt
+import datetime
 import pandas as pd
 import xml.etree.ElementTree as ET
 
 class main():
-    def init(self, file_path):
+    def __init__(self, file_path):
         self.file_path = file_path
         self.type_dic = {'HKQuantityTypeIdentifierHeight': 'Height',
                            'HKQuantityTypeIdentifierBodyMass': 'Body_Mass',
@@ -36,6 +36,8 @@ class main():
             if ignore_index == False:
                 health_df = pd.DataFrame([record])
                 ignore_index = True
+                continue
+            health_df = health_df.append([record], ignore_index=ignore_index)
         return health_df
 
     def __datetime_formating(self, time):
