@@ -4,8 +4,7 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 
 class main():
-    def __init__(self, file_path):
-        self.file_path = file_path
+    def __init__(self):
         self.type_dic = {'HKQuantityTypeIdentifierHeight': 'Height',
                            'HKQuantityTypeIdentifierBodyMass': 'Body_Mass',
                            'HKQuantityTypeIdentifierStepCount': 'Step_Count',
@@ -27,7 +26,7 @@ class main():
                             'Step_Count': 'count'}
 
     def xml_to_df(self, file_path:str):
-        tree = ET.parse(self.file_path)
+        tree = ET.parse(file_path)
         root = tree.getroot()
 
         ignore_index = False
@@ -56,8 +55,8 @@ class main():
         
         return df
     
-    def get_dataframe(self):
-        df = self.xml_to_df(self.file_path)
+    def process_dataframe(self, file_path:str):
+        df = self.xml_to_df(file_path)
         df = self.__preprocessing(df)
         
         to_group_by_sum = df[df['type'].isin(['Step_Count',

@@ -4,13 +4,11 @@ from zipfile import ZipFile
 import os
 
 class dropbox_func():
-    def __init__(self, appkey, appsecret, accestoken,
+    def __init__(self, accestoken,
                         dbxPath, dataPath):
-        self.appkey = appkey
-        self.appsecret = appsecret
         self.accestoken = accestoken
         self.dbxPath = dbxPath
-        self.dataPath = dataPath
+        self.dataPath = dataPath    
         self.dbx = dropbox.Dropbox(accestoken)
 
     def files_list(self):
@@ -19,6 +17,7 @@ class dropbox_func():
         return result.entries
 
     def __download_File(self, file_name, path_lower):
+        print("Downloading {}".format(file_name))
         self.dbx.files_download_to_file(self.dataPath+file_name,
                                                 path_lower)
     def __extract_File(self, file_name):

@@ -1,0 +1,10 @@
+{
+    "Dropbox_API_Token": "ur_private_dropbox_api_token",
+    "MySQL_host": "127.0.0.1",
+    "MySQL_user": "root",
+    "MySQL_pw": "",
+    "MySQL_DBname": "Apple_health",
+    "Mounted_dir_path": "Temporary_Data/",
+    "CSV_Data_dir": "Results_csv/",
+    "Dropbox_path": "/Applications/RunGap/export"
+}
