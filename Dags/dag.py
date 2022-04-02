@@ -167,5 +167,5 @@ with DAG('AppleHealthData_Dag', schedule_interval='@daily', default_args=default
 
 
         is_dropbox_Mysql_available >> check_for_new_files >> download_data >> process_data >> detect_import_file >> import_new_data >> delete_temporary_files >> finish_processing
-        finish_processing >> check_for_new_files >> no_new_files >> finish_processing
+        is_dropbox_Mysql_available >> check_for_new_files >> no_new_files >> finish_processing
 
