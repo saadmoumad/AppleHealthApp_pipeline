@@ -1,7 +1,7 @@
 # AppleHealthApp_pipeline
 ### A data pipeline for fun
 
-the idea of this project is to collect my fitness data from multiple devices and present it in the same dashboard, by automatization of an airflow based pipeline.
+the idea of this project is to collect my fitness data from multiple devices and present it in the same dashboard, by automatization a workflow of an airflow based pipeline.
 
 
 
