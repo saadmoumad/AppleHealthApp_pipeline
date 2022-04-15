@@ -1,4 +1,10 @@
 # AppleHealthApp_pipeline
+### A data pipeline for fun
+
+the idea of this project is to collect my fitness data from multiple devices and present it in the same dashboard, by automatization of an airflow based pipeline.
+
+
+
 
 ### Notes:
 - In order to implement this, you would need to configure Airflow, configure your own *mySQL* database and add in the appropriate connection variables for *Dropbox API*. All of this variables should be pre-defined in the 'Scripts/airflow_variables.json' file.
