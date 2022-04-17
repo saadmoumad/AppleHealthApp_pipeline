@@ -3,6 +3,9 @@
 
 the idea of this project is to collect my fitness data from multiple devices and present it in the same dashboard, by automating a workflow of an airflow based pipeline.
 
+Pipeline architecture:
+![alt text](https://github.com/saadmoumad/AppleHealthApp_pipeline/blob/main/Images/pipeline.png "pipeline architecture")
+
 
 
 
